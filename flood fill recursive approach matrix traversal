@@ -1,0 +1,33 @@
+void sol(vector<vector<int>>&image,int sr,int sc,int color,int x)
+{
+    int n=image.size();int m=image[0].size(); 
+    if(image[sr][sc]==x)
+{
+    image[sr][sc]=color;
+    
+    if(sr<n-1 and image[sr+1][sc]==x)
+    {sol(image,sr+1,sc,color,x);}
+    
+    if(sr>0 and image[sr-1][sc]==x)
+    {sol(image,sr-1,sc,color,x);}
+    
+    if(sc<m-1 and image[sr][sc+1]==x)
+    {sol(image,sr,sc+1,color,x);}
+    
+    if(sc>0 and image[sr][sc-1]==x)
+    {sol(image,sr,sc-1,color,x);}
+}
+return;
+}
+
+
+
+vector<vector<int>> solve(vector<vector<int>> im, int r, int c, int col){
+int x1 = im[r][c];
+
+if(x1==col)
+{return im;}
+sol(im,r,c,col,x1);
+return im;
+
+}
