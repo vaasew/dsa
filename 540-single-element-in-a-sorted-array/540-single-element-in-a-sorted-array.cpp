@@ -6,7 +6,7 @@ public:
         int mid;
         while(start<=end)
         {
-            mid=(start+end)>>1;
+            mid=(start+end)>>1;//>> faster than /2
             if((mid!=nums.size()-1 and mid%2==0 and nums[mid]==nums[mid+1]) or (mid !=0 and mid%2==1 and nums[mid]==nums[mid-1]))
             {
                 start=mid+1;
