@@ -12,16 +12,13 @@ public:
                 start=mid+1;
                 //we are at left side of single element
             }
-            else if((mid !=0 and mid%2==0 and nums[mid]==nums[mid-1]) or (mid!=nums.size()-1 and mid%2==1 and nums[mid]==nums[mid+1]))
+            else 
             {
             end=mid-1;
             }
-            else
-            {
-                break;
-            }
+           
         }
-        return nums[mid];
+        return nums[start];
         
     }
 };
