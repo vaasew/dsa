@@ -42,6 +42,8 @@ public:
 //         {
 //             return 0;
 //         }
+// }
+    // this answer didnt work for a big integer so alternate solution is given below but the other answer is also right and good enough
        int minEatingSpeed(vector<int>& piles, int H) {
         int l = 1, r = 1000000000;
         while (l < r) {
