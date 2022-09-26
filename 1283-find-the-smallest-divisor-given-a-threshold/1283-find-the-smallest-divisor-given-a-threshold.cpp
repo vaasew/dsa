@@ -5,7 +5,7 @@ public:
         while (left <=right) {
             m = (left + right) / 2, sum = 0;
             for (int i : nums)
-                sum += (i + m - 1) / m;
+              i%m == 0 ? sum += (i/m) : sum += (i/m)+1;
             if (sum > threshold)
                 left = m + 1;
             else
