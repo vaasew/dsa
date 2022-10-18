@@ -44,6 +44,8 @@ public:
         int j =0;
         vector<int>lps(m);
         
+        lps[0]=0;
+        
         int i=1;
         
         while(i<m)
